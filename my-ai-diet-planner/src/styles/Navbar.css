@@ -10,14 +10,27 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* ✅ Dark mode navbar background */
+body.dark-mode .navbar {
+  background: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+/* ✅ Logo */
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #2e7d32;
-  display: flex;
-  align-items: center;
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Dark mode logo color */
+body.dark-mode .logo {
+  color: #ffffff;
 }
 
 .navbar-right {
@@ -33,10 +46,16 @@
   transition: color 0.3s;
 }
 
+/* ✅ Dark mode link color */
+body.dark-mode .navbar-right a {
+  color: #dddddd;
+}
+
 .navbar-right a:hover {
   color: #4caf50;
 }
 
+/* CTA (Login) Button */
 .cta {
   background-color: #4caf50;
   border: none;
@@ -51,8 +70,15 @@
   background-color: #388e3c;
 }
 
+/* Dark Mode Toggle */
 #dark-mode-toggle {
   cursor: pointer;
   font-size: 1.2rem;
   margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+/* ✅ Dark mode toggle icon color */
+body.dark-mode #dark-mode-toggle {
+  color: #ffffff;
 }

@@ -1,0 +1,113 @@
+/* ========== Hero Section ========== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem 2rem; /* Bottom padding reduced to remove divider */
+  background: #f9f9f9;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ✅ AMOLED Black Dark Mode */
+body.dark-mode .hero {
+  background: #000000 !important;
+}
+
+/* ========== Hero Content ========== */
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+body.dark-mode .hero-content h1 {
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #222;
+}
+
+body.dark-mode .hero-content p {
+  color: #cccccc;
+}
+
+/* ========== Button ========== */
+.primary-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: #388e3c;
+}
+
+body.dark-mode .primary-btn {
+  background-color: #66bb6a;
+}
+
+body.dark-mode .primary-btn:hover {
+  background-color: #4caf50;
+}
+
+/* ========== Hero Image ========== */
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.floating-meal {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 1rem;
+  animation: floatWithShift 3s ease-in-out infinite;
+}
+
+.shifted-right {
+  transform: translateX(40px);
+}
+
+@keyframes floatWithShift {
+  0%, 100% {
+    transform: translateX(40px) translateY(0);
+  }
+  50% {
+    transform: translateX(40px) translateY(-10px);
+  }
+}
+
+/* ========== Daily Tip ========== */
+.daily-tip {
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 1s ease;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+body.dark-mode .daily-tip {
+  color: #e0e0e0;
+}
+
+.daily-tip.visible {
+  opacity: 1;
+}
