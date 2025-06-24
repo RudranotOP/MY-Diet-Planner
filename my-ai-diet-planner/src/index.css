@@ -1,5 +1,10 @@
 /* index.css */
 
+/* ========== Base Reset ========== */
+html {
+  scroll-behavior: smooth;
+}
+
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -8,10 +13,11 @@ html, body, #root {
   font-family: 'Segoe UI', sans-serif;
   box-sizing: border-box;
   background-color: #f5f5f5;
+  color: #212121;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Vite default styles */
+/* ========== Vite Defaults Cleanup ========== */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,34 +32,36 @@ html, body, #root {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ========== Anchor Tags ========== */
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 a:hover {
   color: #535bf2;
 }
 
+/* ========== General Body ========== */
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
   background-color: #f5f5f5;
   color: #212121;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-/* Headings */
+/* ========== Headings ========== */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0;
 }
 
-/* Buttons */
+/* ========== Buttons ========== */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -74,7 +82,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Light Theme */
+/* ========== Light Theme Media Query ========== */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -89,7 +97,7 @@ button:focus-visible {
   }
 }
 
-/* ✅ DARK MODE OVERRIDES */
+/* ========== Dark Mode Overrides ========== */
 body.dark-mode {
   background-color: #000000;
   color: #f5f5f5;
@@ -130,4 +138,11 @@ body.dark-mode input {
   background-color: #1a1a1a;
   color: #eee;
   border: 1px solid #444;
+}
+
+/* ========== Utility Fixes for Gaps ========== */
+section, header, footer, main {
+  margin: 0;
+  padding: 0;
+  border: none;
 }

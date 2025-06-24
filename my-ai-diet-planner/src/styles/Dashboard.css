@@ -1,0 +1,121 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #000000; /* AMOLED black background */
+  color: #e0e0e0;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Sidebar static width with grey color */
+.sidebar {
+  width: 250px;
+  background-color: #2f2f2f; /* Dark grey sidebar */
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #81c784; /* Slight green tint for contrast */
+}
+
+.sidebar-nav a {
+  color: #e0e0e0;
+  display: block;
+  padding: 0.8rem 0;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(130, 255, 130, 0.15); /* Soft green hover */
+}
+
+/* Main content shifted to right by sidebar width */
+.dashboard-main {
+  margin-left: 250px;
+  padding: 2rem;
+  overflow-y: auto;
+  flex-grow: 1;
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+/* Dashboard Title */
+.dashboard-main header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 1.6rem; /* Slightly smaller heading */
+  font-weight: 700;
+  color: #81c784;
+}
+
+/* Stats cards */
+.stats-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stats-cards .card {
+  flex: 1;
+  background-color: #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  color: #e0e0e0;
+}
+
+.stats-cards .card:hover {
+  background-color: #2a2a2a;
+  box-shadow: 0 6px 14px rgba(130, 255, 130, 0.6);
+}
+
+.stats-cards .card h3 {
+  margin-bottom: 0.5rem;
+  color: #81c784;
+}
+
+.stats-cards .card p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c8facc;
+}
+
+/* Charts section */
+.charts-section {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.chart-card {
+  flex: 1 1 45%;
+  background-color: #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.chart-card h3 {
+  margin-bottom: 1rem;
+  color: #81c784;
+}

@@ -1,8 +1,7 @@
 // src/components/Navbar.jsx
 
-// my name is rudra
-
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // import Link
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -32,12 +31,12 @@ const Navbar = () => {
         <strong style={{ color: darkMode ? '#fff' : '#000' }}>Nutri Mind</strong>
       </div>
       <nav className="navbar-right">
-        <a href="#">🏠 Home</a>
+        <Link to="/">🏠 Home</Link>
         <a href="#features">✨ Features</a>
         <a href="#how-it-works">⚙️ How It Works</a>
         <a href="#testimonials">💬 Testimonials</a>
         {/* <a href="bmi.html">BMI Calculator</a> */}
-        <a href="dashboard.html">📊 Dashboard</a>
+        <Link to="/dashboard">📊 Dashboard</Link>
         <a href="#about">ℹ️ About</a>
         <button id="login-btn" className="cta">Login</button>
         <span

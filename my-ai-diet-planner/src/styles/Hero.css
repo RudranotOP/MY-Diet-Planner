@@ -4,12 +4,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem 2rem; /* Bottom padding reduced to remove divider */
-  background: #f9f9f9;
+  padding: 4rem 2rem 0;
+  margin-bottom: 0;
+  background: #ffffff; /* ✅ MATCHES other sections exactly */
   transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* ✅ AMOLED Black Dark Mode */
 body.dark-mode .hero {
   background: #000000 !important;
 }
@@ -18,7 +18,7 @@ body.dark-mode .hero {
 .hero-content {
   flex: 1;
   min-width: 300px;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem; /* ✅ Removed bottom padding */
 }
 
 .hero-content h1 {
@@ -70,7 +70,7 @@ body.dark-mode .primary-btn:hover {
   flex: 1;
   min-width: 300px;
   text-align: center;
-  padding: 1rem;
+  padding: 0; /* ✅ Remove vertical padding */
 }
 
 .floating-meal {
@@ -100,6 +100,7 @@ body.dark-mode .primary-btn:hover {
   transition: opacity 1s ease;
   text-align: left;
   margin-top: 1rem;
+  margin-bottom: 0; /* ✅ Remove any spacing below */
   font-weight: 500;
   color: #333;
 }

@@ -1,0 +1,127 @@
+/* ========== Section ========== */
+.how-it-works {
+  padding: 4rem 2rem 3rem;
+  margin-top: 0; /* ✅ Remove gap from previous section */
+  background-color: #ffffff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode .how-it-works {
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+/* ========== Title ========== */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #2e7d32;
+}
+
+body.dark-mode .section-title {
+  color: #81c784;
+}
+
+/* ========== Pyramid Layout ========== */
+.how-steps-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.top-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* ========== Cards ========== */
+.how-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 380px; /* ✅ Slightly wider cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  background-color: #e3f2fd; /* Light blue hover for light mode */
+  box-shadow: 0 8px 16px rgba(30, 144, 255, 0.25);
+}
+
+body.dark-mode .how-card {
+  background-color: #121212;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .how-card:hover {
+  background-color: #1e1e2a;
+  box-shadow: 0 8px 16px rgba(135, 206, 250, 0.3);
+}
+
+/* ========== Animated Icon ========== */
+.how-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4caf50;
+  animation: float-icon 3s ease-in-out infinite;
+}
+
+body.dark-mode .how-icon {
+  color: #66bb6a;
+}
+
+@keyframes float-icon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ========== Headings & Text ========== */
+.how-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
+body.dark-mode .how-card h3 {
+  color: #ffffff;
+}
+
+.how-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+body.dark-mode .how-card p {
+  color: #bbbbbb;
+}
+
+/* ========== Responsive Adjustments ========== */
+@media (max-width: 768px) {
+  .top-row,
+  .bottom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .how-card {
+    max-width: 90%;
+  }
+}

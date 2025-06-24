@@ -1,7 +1,8 @@
 /* ========== Features Section ========== */
 .features {
-  padding: 4rem 2rem 3rem;
-  background: #f9f9f9;
+  padding: 4rem 2rem 0rem; /* ✅ No bottom padding */
+  margin-bottom: 0;        /* ✅ No margin below */
+  background: #ffffff;     /* Matches How It Works section */
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -35,19 +36,19 @@ body.dark-mode .features h2 {
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  background-color: #f0f8ff; /* Subtle light blue */
-  box-shadow: 0 6px 12px rgba(100, 149, 237, 0.25); /* Cornflower blue glow */
+  background-color: #f0f8ff; /* Light hover */
+  box-shadow: 0 6px 12px rgba(100, 149, 237, 0.25);
 }
 
 /* ✅ Dark mode card */
 body.dark-mode .feature-card {
-  background-color: #121212; /* AMOLED friendly card */
+  background-color: #121212;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
 

@@ -1,0 +1,90 @@
+/* ========== Section Container ========== */
+.testimonials {
+  padding: 4rem 2rem 3rem;
+  background-color: #ffffff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode .testimonials {
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+/* ========== Section Title ========== */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2e7d32;
+}
+
+body.dark-mode .section-title {
+  color: #81c784;
+}
+
+/* ========== Pyramid Layout ========== */
+.testimonial-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ========== Testimonial Card ========== */
+.testimonial-card {
+  background-color: #fefefe; /* Light mode card */
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  background-color: #e3f2fd;
+  box-shadow: 0 8px 18px rgba(33, 150, 243, 0.25);
+}
+
+/* ========== Dark Mode Card ========== */
+body.dark-mode .testimonial-card {
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .testimonial-card:hover {
+  background-color: #222c35;
+  box-shadow: 0 8px 18px rgba(100, 149, 237, 0.4); /* Cornflower glow */
+}
+
+/* ========== Testimonial Text ========== */
+.testimonial-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+body.dark-mode .testimonial-card p {
+  color: #cccccc;
+}
+
+/* ========== User Name ========== */
+.testimonial-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+body.dark-mode .testimonial-card h4 {
+  color: #81c784;
+}
