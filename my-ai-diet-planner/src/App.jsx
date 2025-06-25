@@ -9,43 +9,40 @@ import Testimonials from './components/Testimonials';
 import About from './components/About';
 import FloatingIcons from './components/FloatingIcons';
 import Dashboard from './components/Dashboard';
-import AuthModal from './components/AuthModal'; // ✅ NEW modal component
+import GenerateMealPlan from './components/GenerateMealPlan';
+import AuthModal from './components/AuthModal';
 
 function App() {
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  const handleLoginClick = () => {
-    setShowAuthModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowAuthModal(false);
-  };
+  const handleLoginClick = () => setShowAuthModal(true);
+  const handleCloseModal = () => setShowAuthModal(false);
 
   return (
-    <>
-      <Routes>
-        {/* Home Page Route with Navbar */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar onLoginClick={handleLoginClick} />
-              <Hero />
-              <Features />
-              <HowItWorks />
-              <Testimonials />
-              <About />
-              <FloatingIcons />
-              {showAuthModal && <AuthModal onClose={handleCloseModal} />}
-            </>
-          }
-        />
+    <Routes>
+      {/* Home Page with Navbar */}
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar onLoginClick={handleLoginClick} />
+            <Hero />
+            <Features />
+            <HowItWorks />
+            <Testimonials />
+            <About />
+            <FloatingIcons />
+            {showAuthModal && <AuthModal onClose={handleCloseModal} />}
+          </>
+        }
+      />
 
-        {/* Dashboard Route without Navbar */}
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-    </>
+      {/* Dashboard Page (No Navbar) */}
+      <Route path="/dashboard" element={<Dashboard />} />
+
+      {/* Generate Meal Plan Page (No Navbar) */}
+      <Route path="/generate-meal-plan" element={<GenerateMealPlan />} />
+    </Routes>
   );
 }
 

@@ -1,0 +1,130 @@
+/* src/styles/GenerateMealPlan.css */
+
+.generate-page {
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  position: relative;
+}
+
+/* Main Heading */
+.generate-title {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  color: #81c784;
+  position: relative;
+}
+
+.generate-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #81c784;
+  margin: 0.5rem auto 2rem;
+  border-radius: 2px;
+}
+
+/* Home Button */
+.home-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #000000 !important; /* ✅ Force black */
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.home-btn:hover,
+.home-btn:focus,
+.home-btn:visited {
+  color: #000000 !important;
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* Category Section */
+.category-section {
+  margin-bottom: 3rem;
+}
+
+/* Category Title */
+.category-title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #ffeb3b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Plan Card */
+.plan-card {
+  background-color: #0d1b2a; /* ✅ dark blue */
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4); /* Blue glow */
+}
+
+/* Emoji Icon */
+.plan-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Plan Title */
+.plan-card h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Quote */
+.quote {
+  font-style: italic;
+  color: #cccccc;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* Select Plan Button */
+.select-btn {
+  background-color: #2196f3; /* ✅ blue */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-btn:hover {
+  background-color: #1e88e5;
+}

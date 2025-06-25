@@ -1,8 +1,9 @@
 // src/components/Hero.jsx
 import React, { useState, useEffect } from 'react';
 import '../styles/Hero.css';
-import mealImage from '../assets/float2.png'; // Ensure this exists
-import BMICalculator from './BMICalculator'; // ✅ Import BMI component
+import mealImage from '../assets/float2.png';
+import BMICalculator from './BMICalculator';
+import { useNavigate } from 'react-router-dom'; // ✅ React Router hook
 
 const Hero = () => {
   const tips = [
@@ -16,7 +17,8 @@ const Hero = () => {
 
   const [currentTip, setCurrentTip] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [showBMI, setShowBMI] = useState(false); // ✅ BMI modal state
+  const [showBMI, setShowBMI] = useState(false);
+  const navigate = useNavigate(); // ✅ React Router hook
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,7 +41,12 @@ const Hero = () => {
             {tips[currentTip]}
           </div>
           <div style={{ marginTop: '1.5rem' }}>
-            <a href="select-plan.html" className="primary-btn">Generate Meal Plan</a>
+            <button
+              className="primary-btn"
+              onClick={() => navigate('/generate-meal-plan')} // ✅ Navigate on click
+            >
+              Generate Meal Plan
+            </button>
             <button
               className="primary-btn"
               style={{ marginLeft: '1rem' }}
