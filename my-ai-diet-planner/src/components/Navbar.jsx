@@ -1,13 +1,12 @@
 // src/components/Navbar.jsx
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // import Link
+import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onLoginClick }) => {
   const [darkMode, setDarkMode] = useState(false);
 
-  // Load dark mode preference on mount
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode') === 'true';
     if (savedMode) {
@@ -16,7 +15,6 @@ const Navbar = () => {
     }
   }, []);
 
-  // Toggle dark mode on click
   const toggleDarkMode = () => {
     const isDark = !darkMode;
     setDarkMode(isDark);
@@ -35,10 +33,9 @@ const Navbar = () => {
         <a href="#features">✨ Features</a>
         <a href="#how-it-works">⚙️ How It Works</a>
         <a href="#testimonials">💬 Testimonials</a>
-        {/* <a href="bmi.html">BMI Calculator</a> */}
         <Link to="/dashboard">📊 Dashboard</Link>
         <a href="#about">ℹ️ About</a>
-        <button id="login-btn" className="cta">Login</button>
+        <button id="login-btn" className="cta" onClick={onLoginClick}>Login</button>
         <span
           id="dark-mode-toggle"
           onClick={toggleDarkMode}
