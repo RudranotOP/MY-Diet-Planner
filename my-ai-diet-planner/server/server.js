@@ -2,17 +2,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const bmiRoutes = require('./routes/bmiRoutes');
+const mealPlanRoutes = require('./routes/mealPlanRoutes');
 
-// Load environment variables
 dotenv.config();
 
-// Create Express app
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: '*',
+  origin: 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -22,13 +22,18 @@ app.get('/', (req, res) => {
   res.send('✅ API is running...');
 });
 
-// Import user routes
+// Import routes
+const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/userRoutes');
 
-// Use user routes
+// Mount routes
+app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
-// Connect to MongoDB and start server
+app.use('/api/bmi', bmiRoutes);
+app.use('/api/meal-plans', mealPlanRoutes);
+
+// Connect to DB and start server
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.MONGO_URI)
